@@ -26,6 +26,7 @@
     "react-tilt": "^1.0.2",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.71.1",
+    "sharp": "^0.33.2",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {

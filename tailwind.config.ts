@@ -14,12 +14,12 @@ const config: Config = {
       keyframes: {
         spotlight: {
           "0%": {
-            opacity: 0,
+            opacity: "0", // Assign opacity as string "0"
             transform: "translate(-72%, -62%) scale(0.5)",
           },
           "100%": {
-            opacity: 1,
-            transform: "translate(-50%,-40%) scale(1)",
+            opacity: "1", // Assign opacity as string "1"
+            transform: "translate(-50%, -40%) scale(1)",
           },
         },
       },
@@ -32,4 +32,5 @@ const config: Config = {
   },
   plugins: [],
 }
+
 export default config

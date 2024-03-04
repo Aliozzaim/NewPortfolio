@@ -106,7 +106,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="    left-0 top-0">
+    <div id="Projects" className="left-0 top-0">
       <motion.div variants={textVariant()}>
         <p
           className={`${styles.sectionSubText} bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}

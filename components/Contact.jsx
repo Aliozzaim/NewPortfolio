@@ -171,7 +171,7 @@ const Contact = () => {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="What you want to say?"
-                  className="bg-tertiary py-4 !bg-black  px-6 placeholder:text-secondary h-[100px] text-white rounded-lg outline-none border-none font-medium"
+                  className="bg-tertiary py-4 !bg-black  px-6 placeholder:text-secondary h-[70px] text-white rounded-lg outline-none border-none font-medium"
                 />
                 <p className="text-red-500 mt-1">{errors.message}</p>
               </label>

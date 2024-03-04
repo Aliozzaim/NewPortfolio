@@ -65,10 +65,10 @@ const Education = () => {
     <>
       <motion.div variants={textVariant()}>
         <p
-          className={`${styles.sectionSubText} text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+          className={` text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
         ></p>
         <h2
-          className={`${styles.sectionHeadText} text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+          className={`text-center text-7xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
         >
           Education
         </h2>

@@ -66,12 +66,12 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p
-          className={`${styles.sectionSubText} text-center mt-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+          className={` text-center mt-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
         >
           What I have done so far
         </p>
         <h2
-          className={`${styles.sectionHeadText} text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+          className={` text-center text-7xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
         >
           Work Experience
         </h2>

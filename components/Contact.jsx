@@ -113,21 +113,21 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex  xl:flex-row flex-col-reverse gap-[20px] overflow-hidden`}
+      className={`xl:mt-12 flex  xl:flex-row flex-col-reverse gap-[20px] overflow-hidden mb-3`}
     >
-      <div className="!max-h-[80%] flex-[0.65]">
+      <div className=" flex-[0.65]">
         <BackgroundGradient type="tilt">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
-            className="flex-[0.60] bg-black p-8 rounded-2xl "
+            className=" bg-black p-8 rounded-2xl "
           >
             <p
-              className={`${styles.sectionSubText} bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+              className={` bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
             >
               Get in touch
             </p>
             <h3
-              className={`${styles.sectionHeadText} bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
+              className={` text-6xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
             >
               Contact
             </h3>

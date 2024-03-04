@@ -26,8 +26,9 @@ export const TechParallax = ({
     let skillSet = gsap.utils.toArray(".skill-set")
 
     let to = gsap.to(skillSet, {
-      xPercent: () => 4 * (skillSet.length - 1),
-      ease: "none",
+      xPercent: () => 8 * (skillSet.length - 1),
+      duration: 5,
+      ease: "elastic.out(1,0.3)",
       scrollTrigger: {
         trigger: scroller.current,
         markers: false,
@@ -45,7 +46,7 @@ export const TechParallax = ({
     return () => {
       to.kill()
     }
-  }, [])
+  }, [scroller, skills])
 
   const firstRow = products.slice(0, 5)
   const secondRow = products.slice(4, 9)
@@ -85,7 +86,7 @@ export const TechParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[150vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[130vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <motion.div
         style={{
@@ -167,7 +168,7 @@ export const ProductCard = ({
       key={product.name}
       className={`${
         index / 2 === 1 ? "!text-white" : ""
-      } group/product text-8xl font-extrabold uppercase tracking-tighte relative flex-shrink-0`}
+      } group/product text-7xl font-extrabold uppercase tracking-tighte relative flex-shrink-0`}
     >
       {product.name}
     </motion.p>

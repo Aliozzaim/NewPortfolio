@@ -30,7 +30,9 @@ const ServiceCard = ({ index, title, icon }) => (
         className="w-16 h-16 object-contain"
       />
 
-      <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <h3 className="text-white text-[20px] font-bold text-center !max-w-[152px]  ">
+        {title}
+      </h3>
     </div>
   </motion.div>
 )
@@ -39,12 +41,16 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <h2
+          className={`${styles.sectionHeadText} text- !text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+        >
+          About Me
+        </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4  ml-[15%] max-lg:ml-[10%] max-sm:ml-0 text-center  text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and expertise in frameworks like React, Node.js, and
@@ -53,7 +59,7 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-[1rem] w-full">
+      <div className="mt-20 flex flex-wrap gap-[2rem] w-full max-sm:justify-center">
         {services.map((service, index) => (
           <BackgroundGradient key={service.title} index={index}>
             <ServiceCard index={index} {...service} />

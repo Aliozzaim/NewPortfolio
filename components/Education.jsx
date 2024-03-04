@@ -64,8 +64,14 @@ const Education = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}></p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Education</h2>
+        <p
+          className={`${styles.sectionSubText} text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+        ></p>
+        <h2
+          className={`${styles.sectionHeadText} text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+        >
+          Education
+        </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">

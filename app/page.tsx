@@ -8,18 +8,19 @@ import Tech from "../components/Tech"
 import StarsCanvas from "../components/canvas/Stars.jsx"
 import Works from "../components/Works"
 import Contact from "../components/Contact"
+import { TechParallax } from "@/components/ui/Tech-parallax"
+import { technologies } from "@/constants"
 
 export default function Home() {
   return (
     <div className="relative z-0 bg-primary">
-      <div className=" bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Hero />
-      </div>
+      <Navbar />
+      <Hero />
+
       <About />
       <Experience />
       <Education />
-      <Tech />
+      <TechParallax products={technologies} />
       <div className="relative z-0">
         <StarsCanvas />
         <Works />

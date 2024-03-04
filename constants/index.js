@@ -40,6 +40,10 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "Projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -69,6 +73,7 @@ const technologies = [
     name: "HTML 5",
     icon: html,
   },
+  { name: "Next.js" },
   {
     name: "CSS 3",
     icon: css,

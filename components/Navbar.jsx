@@ -2,7 +2,7 @@
 "use client"
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
-
+import Image from "next/image"
 import { styles } from "../styles"
 import { navLinks } from "../constants"
 import { menu, close } from "../assets"
@@ -15,7 +15,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
-      if (scrollTop > 100) {
+      if (scrollTop > 500) {
         setScrolled(true)
       } else {
         setScrolled(false)
@@ -31,8 +31,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full max-w-[1280px] z-50 flex items-center py-5  fixed top-0  mx-auto bg-black ${
-        scrolled ? " " : "bg-transparent"
+      } w-full    z-50 flex items-center py-5  fixed top-0  mx-auto bg-black ${
+        scrolled ? "" : "bg-transparent"
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -44,9 +44,9 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
+          <p className=" text-[18px] font-bold cursor-pointer flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
             Ali Ozzaim &nbsp;
-            <span className="sm:block hidden"> | Frontend Developer</span>
+            <span className="sm:block hidden"> | Full Stack Developer</span>
           </p>
         </Link>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
+                active === nav.title ? "text-white " : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
+          <Image
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain"
@@ -75,13 +75,13 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] w-[50%] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={`font-poppins font-medium cursor-pointer text-[16px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {

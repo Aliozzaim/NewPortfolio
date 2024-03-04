@@ -109,12 +109,12 @@ export const Header = () => {
     <div id="Projects" className="left-0 top-0">
       <motion.div variants={textVariant()}>
         <p
-          className={`${styles.sectionSubText} bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
+          className={`bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
         >
           My work
         </p>
         <h2
-          className={`${styles.sectionHeadText} bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
+          className={`text-start text-7xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50`}
         >
           Projects
         </h2>

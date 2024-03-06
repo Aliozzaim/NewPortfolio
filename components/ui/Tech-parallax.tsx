@@ -86,7 +86,7 @@ export const TechParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[130vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[145vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <motion.div
         style={{

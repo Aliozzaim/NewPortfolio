@@ -10,7 +10,11 @@ import { SectionWrapper } from "../hoc"
 import { BackgroundGradient } from "./ui/Background-gradient"
 import { slideIn } from "../utils/motion"
 import { Button } from "@nextui-org/react"
+import Confetti from "react-confetti"
+import { useWindowSize } from "react-use"
+
 const Contact = () => {
+  const { width, height } = useWindowSize()
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
   const formRef = useRef()
@@ -78,8 +82,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        "service_5do17kb",
+        "template_c74two7",
         {
           from_name: form.name,
           to_name: "Ali",
@@ -87,7 +91,7 @@ const Contact = () => {
           to_email: "Aliozzaim788@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        "RxwvCc3HpuVVISH5y"
       )
       .then(() => {
         setForm({
@@ -97,7 +101,7 @@ const Contact = () => {
         })
         setTimeout(() => {
           setLoading(false)
-        }, 1100)
+        }, 1700)
         setSubmitMessage(
           "Thank you. I will get back to you as soon as possible."
         )
@@ -115,7 +119,14 @@ const Contact = () => {
     <div
       className={`xl:mt-12 flex  xl:flex-row flex-col-reverse gap-[20px] overflow-hidden mb-3`}
     >
-      <div className=" flex-[0.65]">
+      <Confetti
+        className={`${loading ? "z-[100]" : ""} absolute`}
+        opacity={loading ? 1 : 0}
+        width={typeof window !== "undefined" ? window.innerWidth : 1250}
+        height={typeof window !== "undefined" ? window.innerHeight : 700}
+        numberOfPieces={loading ? 80 : 0}
+      />
+      <div className={`${loading ? "-z-10" : ""}  flex-[0.65] `}>
         <BackgroundGradient type="tilt">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
@@ -202,7 +213,6 @@ const Contact = () => {
           </motion.div>
         </BackgroundGradient>
       </div>
-
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-[0.50] xl:h-auto md:h-[550px] h-[250px] "

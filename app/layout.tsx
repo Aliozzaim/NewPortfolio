@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-BJQDL2NJJ8"
@@ -45,7 +45,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </Head>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

@@ -201,7 +201,7 @@ const Contact = () => {
             </form>
             {isSubmitted && (
               <div
-                className={`mt-2 text-white ${
+                className={`mt-2 text-white text-center ${
                   submitMessage.includes("Thank")
                     ? "text-green-500"
                     : "text-red-500"

@@ -7,10 +7,6 @@ import {
   useSpring,
   MotionValue,
 } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { fadeIn, textVariant } from "../../utils/motion"
-import { styles } from "../../styles"
 import { gsap } from "gsap"
 
 export const TechParallax = ({
@@ -160,7 +156,7 @@ export const ProductCard = ({
     <motion.p
       style={{
         x: translate,
-        color: getRandomColor(), // Combine styles into a single object
+        color: getRandomColor(),
       }}
       whileHover={{
         y: -10,

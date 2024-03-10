@@ -119,13 +119,14 @@ const Contact = () => {
     <div
       className={`xl:mt-12 flex  xl:flex-row flex-col-reverse gap-[20px] overflow-hidden mb-3`}
     >
-      <Confetti
-        className={`${loading ? "z-[100]" : ""} absolute`}
-        opacity={loading ? 1 : 0}
-        width={typeof window !== "undefined" ? window.innerWidth : 1250}
-        height={typeof window !== "undefined" ? window.innerHeight : 700}
-        numberOfPieces={loading ? 80 : 0}
-      />
+      {loading ? (
+        <Confetti
+          className={`${loading ? "z-[100]" : ""} absolute`}
+          opacity={loading ? 1 : 0}
+          width={typeof window !== "undefined" ? window.innerWidth : 1250}
+          height={typeof window !== "undefined" ? window.innerHeight : 700}
+        />
+      ) : null}
       <div className={`${loading ? "-z-10" : ""}  flex-[0.65] `}>
         <BackgroundGradient type="tilt">
           <motion.div

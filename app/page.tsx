@@ -8,6 +8,7 @@ import Works from "../components/Works"
 import Contact from "../components/Contact"
 import { TechParallax } from "@/components/ui/Tech-parallax"
 import { technologies } from "@/constants"
+import { World } from "@/components/ui/Globe"
 
 export default function Home() {
   return (

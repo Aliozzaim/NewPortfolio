@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/ali-r%C4%B1za-%C3%B6zzaim-8b1ba320a/"
-              className="  ml-[1.5rem]  w-[45px] h-[36px] inline-flex !rounded-full  animate-shimmer items-center justify-center  border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              className="  ml-[1rem]  w-[45px] h-[36px] inline-flex !rounded-full  animate-shimmer items-center justify-center  border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%]  font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
             >
               <Image
                 className="w-[20px] h-[20px]"

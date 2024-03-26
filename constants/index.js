@@ -31,10 +31,10 @@ import garden from "../assets/garden.png"
 import faycalWP2 from "../assets/falcalWP2.png"
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
+  // {
+  //   id: "about",
+  //   title: "About",
+  // },
   {
     id: "work",
     title: "Work",

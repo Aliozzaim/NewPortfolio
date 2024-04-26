@@ -16,6 +16,8 @@ import {
   figma,
   tripguide,
   threejs,
+  consult,
+  upBox,
 } from "../assets"
 
 import sompo from "../assets/company/sompo.png"

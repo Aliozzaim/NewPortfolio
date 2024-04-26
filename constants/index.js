@@ -29,6 +29,8 @@ import MercanSoft from "../assets/mercansoft.png"
 import ecommerce from "../assets/art.png"
 import garden from "../assets/garden.png"
 import faycalWP2 from "../assets/falcalWP2.png"
+import consult from "../assets/consul.png"
+import upBox from "../assets/upBox.png"
 
 export const navLinks = [
   // {
@@ -217,6 +219,28 @@ const testimonials = [
 
 const projects = [
   {
+    title: "consultancy",
+    description:
+      "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://consultancy-two-coral.vercel.app/",
+    thumbnail: consult,
+    link: "https://consultancy-two-coral.vercel.app/",
+  },
+  {
     title: "NakilPort",
     description:
       "NakilPort is a platform that connects carriers and shippers. It allows carriers to find loads and shippers to find carriers. The platform is built with Next.js and Firebase, and it features a responsive design, user authentication, and a restful API.",
@@ -238,7 +262,28 @@ const projects = [
     thumbnail: nakilport,
     link: "https://nakilport.com/",
   },
-
+  {
+    title: "UpBox",
+    description:
+      "UpBox is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://up-box.vercel.app/#",
+    thumbnail: upBox,
+    link: "https://up-box.vercel.app/#",
+  },
   {
     title: "MercanSoft",
     description:
@@ -257,9 +302,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    demoLink: "https://mercansoft.vercel.app/",
+    demoLink: "https://mercan-soft-3qxnl786k-aliozzaim.vercel.app/",
     thumbnail: MercanSoft,
-    link: "https://github.com/Aliozzaim/TravelExplorer",
+    link: "https://mercan-soft-3qxnl786k-aliozzaim.vercel.app/",
   },
   {
     title: "3D Art Exhibition",
@@ -371,6 +416,28 @@ const projects = [
     demoLink: "https://nakilport.com/",
     thumbnail: nakilport,
     link: "https://nakilport.com/",
+  },
+  {
+    title: "consultancy",
+    description:
+      "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://consultancy-two-coral.vercel.app/",
+    thumbnail: consult,
+    link: "https://consultancy-two-coral.vercel.app/",
   },
 ]
 

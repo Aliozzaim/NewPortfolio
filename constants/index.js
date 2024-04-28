@@ -30,7 +30,7 @@ import ecommerce from "../assets/art.png"
 import garden from "../assets/garden.png"
 import faycalWP2 from "../assets/falcalWP2.png"
 import consult from "../assets/consul.png"
-import upBox from "../assets/upBox.png"
+import upBox from "../assets/upbox.png"
 
 export const navLinks = [
   // {

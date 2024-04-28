@@ -16,7 +16,6 @@ import {
   figma,
   tripguide,
   threejs,
-  consult,
   upBox,
 } from "../assets"
 

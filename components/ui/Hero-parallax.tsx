@@ -10,7 +10,6 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { fadeIn, textVariant } from "../../utils/motion"
-import { styles } from "../../styles"
 
 export const HeroParallax = ({
   products,
@@ -20,6 +19,7 @@ export const HeroParallax = ({
     link: string
     thumbnail: string
     description: string
+    tags: { name: string; color: string }[]
   }[]
 }) => {
   const firstRow = products.slice(0, 5)
@@ -60,7 +60,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[290vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[320vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -122,7 +122,7 @@ export const Header = () => {
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+          variants={fadeIn("up", "spring", 1, 0.75)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
         >
           Following projects showcases my skills and experience through
@@ -145,36 +145,67 @@ export const ProductCard = ({
     link: string
     thumbnail: string
     description: string
+    tags: { name: string; color: string }[]
   }
   translate: MotionValue<number>
 }) => {
   return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -10,
-      }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0 "
-    >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
+    <>
+      <motion.div
+        style={{
+          x: translate,
+        }}
+        whileHover={{
+          y: -50,
+        }}
+        key={product.title}
+        className="group/product h-[30rem] w-[25rem] relative flex-shrink-0 "
       >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0  group-hover/product:blur-[1px]"
-          alt={product.title}
-        />
-      </Link>
-      <div className="absolute inset-0 h-full w-full  group-hover/product:opacity-30  pointer-events-none  blur-xl "></div>
-      <h2 className="absolute  bottom-[5px] w-[90%]  left-[22px] opacity-0 group-hover/product:opacity-100  text-[14px] rounded-xl p-3 bg-[#18181b] text-white px-5">
-        {product.description}
-      </h2>
-    </motion.div>
+        <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full ">
+          <div className="relative w-full h-[230px]">
+            <Image
+              src={product.thumbnail}
+              alt="project_image"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <Link href={product.link}>
+              <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+                  {/* <img
+                  src={product.thumbnail}
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain"
+          // border 
+                <div className="relative inline-flex  overflow-hidden  p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center  bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl"></span>
+            </div>
+                /> */}
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[24px]">
+              {product.title}
+            </h3>
+            <p className="mt-2 text-secondary text-[14px]">
+              {product.description}
+            </p>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {product.tags.map((tag) => (
+              <p
+                key={`${tag.name}-${tag.name}`}
+                className={`text-[14px] ${tag.color}`}
+              >
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+    </>
   )
 }

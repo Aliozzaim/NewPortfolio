@@ -16,7 +16,6 @@ import {
   figma,
   tripguide,
   threejs,
-  upBox,
 } from "../assets"
 
 import sompo from "../assets/company/sompo.png"
@@ -248,7 +247,7 @@ const projects = [
     tags: [
       {
         name: "Next.js",
-        color: "blue-text-gradient",
+        color: "bg-gradient-to-r from-slate-300 to-slate-500",
       },
       {
         name: "RestFul API",
@@ -256,7 +255,7 @@ const projects = [
       },
       {
         name: "Firebase",
-        color: "pink-text-gradient",
+        color: "bg-gradient-to-r from-blue-600 to-violet-600",
       },
     ],
     demoLink: "https://nakilport.com/",

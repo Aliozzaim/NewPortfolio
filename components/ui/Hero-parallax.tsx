@@ -24,7 +24,7 @@ export const HeroParallax = ({
 }) => {
   const firstRow = products.slice(0, 5)
   const secondRow = products.slice(3, 7)
-  const thirdRow = products.slice(4, 10)
+  const thirdRow = products.slice(5, 10)
   const ref = React.useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,

@@ -219,7 +219,7 @@ const testimonials = [
 
 const projects = [
   {
-    title: "consultancy",
+    title: "Consultancy",
     description:
       "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
     tags: [
@@ -395,30 +395,9 @@ const projects = [
     thumbnail: tripguide,
     link: "https://github.com/Aliozzaim/TravelExplorer",
   },
+
   {
-    title: "NakilPort",
-    description:
-      "NakilPort is a platform that connects carriers and shippers. It allows carriers to find loads and shippers to find carriers. The platform is built with Next.js and Firebase, and it features a responsive design, user authentication, and a restful API.",
-    tags: [
-      {
-        name: "Next.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "RestFul API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "pink-text-gradient",
-      },
-    ],
-    demoLink: "https://nakilport.com/",
-    thumbnail: nakilport,
-    link: "https://nakilport.com/",
-  },
-  {
-    title: "consultancy",
+    title: "Consultancy",
     description:
       "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
     tags: [

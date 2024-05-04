@@ -82,7 +82,7 @@ export const TechParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[145vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[145vh] max-w-[1240px]  m-auto py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <motion.div
         style={{
@@ -164,7 +164,7 @@ export const ProductCard = ({
       key={product.name}
       className={`${
         index / 2 === 1 ? "!text-white" : ""
-      } group/product text-7xl font-extrabold uppercase tracking-tighte relative flex-shrink-0`}
+      } group/product text-6xl font-extrabold uppercase tracking-tighte relative flex-shrink-0`}
     >
       {product.name}
     </motion.p>

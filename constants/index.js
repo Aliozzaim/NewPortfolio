@@ -14,10 +14,9 @@ import {
   mongodb,
   git,
   figma,
-  tripguide,
   threejs,
 } from "../assets"
-
+import ss1 from "../assets/ss4.png"
 import sompo from "../assets/company/sompo.png"
 import poznan from "../assets/company/poznan.png"
 import eru from "../assets/company/eru.png"
@@ -374,7 +373,7 @@ const projects = [
   },
 
   {
-    title: "Trip Guide",
+    title: "TripBook",
     description:
       "This project is a full-stack application that allows users to create, view, update, and delete places. It consists of a backend API built with Node.js, Express.js, and MongoDB, and a frontend user interface built with React.js.",
     tags: [
@@ -392,7 +391,7 @@ const projects = [
       },
     ],
     demoLink: "https://github.com/Aliozzaim/TravelExplorer",
-    thumbnail: tripguide,
+    thumbnail: ss1,
     link: "https://github.com/Aliozzaim/TravelExplorer",
   },
 

@@ -157,7 +157,7 @@ const experiences = [
 const education = [
   {
     title: "Master of Science - Product Engineering",
-    company_name: "Politechnika Poznanska",
+    company_name: "Poznan University Of Technology",
     icon: poznan,
     iconBg: "#E6DEDD",
     date: "February 2023 - July 2024",

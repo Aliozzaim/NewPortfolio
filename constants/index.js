@@ -144,7 +144,7 @@ const experiences = [
     icon: sompo,
     location: "Istanbul, Turkey (Remote)",
     iconBg: "#383E56",
-    date: "February 2023 - September 2023",
+    date: "March 2023 - August 2023",
     points: [
       "Technologies: Vue.js, React.js, PrimeReact, Tailwind.",
       "Maintained and improved the client portal web applications.",

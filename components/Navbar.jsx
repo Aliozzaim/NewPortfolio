@@ -65,7 +65,7 @@ const Navbar = () => {
               onClick={() => setActive(nav.title)}
             >
               <a
-                className="    bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50"
+                className="  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 hover:from-neutral-100 hover:to-neutral-50"
                 href={`#${nav.id}`}
               >
                 {nav.title}

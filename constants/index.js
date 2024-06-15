@@ -30,7 +30,7 @@ import garden from "../assets/garden.png"
 import faycalWP2 from "../assets/falcalWP2.png"
 import consult from "../assets/consul.png"
 import upBox from "../assets/upbox.png"
-
+import Meal from "../assets/meal.png"
 export const navLinks = [
   // {
   //   id: "about",
@@ -416,6 +416,28 @@ const projects = [
     demoLink: "https://consultancy-two-coral.vercel.app/",
     thumbnail: consult,
     link: "https://consultancy-two-coral.vercel.app/",
+  },
+  {
+    title: "Daily Meal",
+    description:
+      "Daily Meal is a web application that allows users to search for recipes based on ingredients. It features a responsive design, user authentication, and a restful API.",
+    tags: [
+      {
+        name: "Firebase",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Vue.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Vuex",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://dailymeal.vercel.app/",
+    thumbnail: Meal,
+    link: "https://github.com/Aliozzaim/dailymeal",
   },
 ]
 

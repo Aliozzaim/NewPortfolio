@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useCallback, useEffect, useMemo, useState } from "react"
 import {
   motion,
   useScroll,
@@ -10,6 +10,16 @@ import {
 import Image from "next/image"
 import Link from "next/link"
 import { fadeIn, textVariant } from "../../utils/motion"
+import { useMousePosition } from "../hooks/useMousePosition"
+import { events } from "@react-three/fiber"
+
+interface StopOnHoverTimeParams {
+  x: number
+}
+
+interface OnHoverTimeParams {
+  x: number
+}
 
 export const HeroParallax = ({
   products,
@@ -22,6 +32,7 @@ export const HeroParallax = ({
     tags: { name: string; color: string }[]
   }[]
 }) => {
+  const { x, y } = useMousePosition()
   const firstRow = products.slice(0, 5)
   const secondRow = products.slice(3, 7)
   const thirdRow = products.slice(5, 10)
@@ -31,14 +42,48 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   })
 
+  const [hoverSlip, setHoverSlip] = useState<number>(0.5)
+  const [stopSlip, setStopSlip] = useState<boolean>(true)
+  const [reverseSlip, setReverseSlip] = useState<number>(-0.5)
+  const stopOnHoverTime = ({
+    x,
+  }: StopOnHoverTimeParams): number | undefined => {
+    setHoverSlip(0.5)
+    return undefined
+  }
+
+  const reverseStopOnHoverTime = ({
+    x,
+  }: StopOnHoverTimeParams): number | undefined => {
+    setReverseSlip(-0.5)
+    return undefined
+  }
+
+  const onhoverTime = ({ x }: OnHoverTimeParams): number => {
+    let newHoverSlip = hoverSlip
+    for (let i = 0; i < 1000; i++) {
+      newHoverSlip += 1.1
+      setHoverSlip(newHoverSlip)
+    }
+    return newHoverSlip
+  }
+  const reverseOnhoverTime = ({ x }: OnHoverTimeParams): number => {
+    let newHoverSlip = hoverSlip
+    for (let i = 0; i < 1000; i++) {
+      newHoverSlip += 1.1
+      setReverseSlip(newHoverSlip)
+    }
+    return newHoverSlip
+  }
+
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 }
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 3], [0, 4000 + hoverSlip]),
     springConfig
   )
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 3], [0, -4000 + -hoverSlip]),
     springConfig
   )
   const rotateX = useSpring(
@@ -90,7 +135,11 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div
+          onHoverEnd={() => stopOnHoverTime({ x: hoverSlip })}
+          onHoverStart={() => onhoverTime({ x: hoverSlip })}
+          className="flex flex-row-reverse space-x-reverse space-x-20"
+        >
           {thirdRow.map((product) => (
             <ProductCard
               product={product}

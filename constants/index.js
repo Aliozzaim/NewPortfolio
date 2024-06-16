@@ -92,6 +92,14 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Vue JS",
+    icon: reactjs,
+  },
+  {
+    name: "Vuex",
+    icon: reactjs,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
   },
@@ -262,26 +270,26 @@ const projects = [
     link: "https://nakilport.com/",
   },
   {
-    title: "UpBox",
+    title: "3D Art Exhibition",
     description:
-      "UpBox is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+      "This project demonstrates my web development skills through visually appealing 3D scenes and animations. With a user-friendly interface on any device, the gallery seamlessly integrates interactive elements, showcasing the captivating potential of art and technology. ",
     tags: [
       {
-        name: "HTML",
+        name: "JavaScript",
         color: "blue-text-gradient",
       },
       {
-        name: "CSS",
+        name: "Three.js",
         color: "green-text-gradient",
       },
       {
-        name: "JavaScript",
+        name: "CSS",
         color: "pink-text-gradient",
       },
     ],
-    demoLink: "https://up-box.vercel.app/#",
-    thumbnail: upBox,
-    link: "https://up-box.vercel.app/#",
+    demoLink: "https://3d-gallery-lime.vercel.app/",
+    thumbnail: ecommerce,
+    link: "https://3d-gallery-lime.vercel.app/",
   },
   {
     title: "MercanSoft",
@@ -306,27 +314,28 @@ const projects = [
     link: "https://mercan-soft-3qxnl786k-aliozzaim.vercel.app/",
   },
   {
-    title: "3D Art Exhibition",
+    title: "UpBox",
     description:
-      "This project demonstrates my web development skills through visually appealing 3D scenes and animations. With a user-friendly interface on any device, the gallery seamlessly integrates interactive elements, showcasing the captivating potential of art and technology. ",
+      "UpBox is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
     tags: [
       {
-        name: "JavaScript",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "Three.js",
+        name: "CSS",
         color: "green-text-gradient",
       },
       {
-        name: "CSS",
+        name: "JavaScript",
         color: "pink-text-gradient",
       },
     ],
-    demoLink: "https://3d-gallery-lime.vercel.app/",
-    thumbnail: ecommerce,
-    link: "https://3d-gallery-lime.vercel.app/",
+    demoLink: "https://up-box.vercel.app/#",
+    thumbnail: upBox,
+    link: "https://up-box.vercel.app/#",
   },
+
   {
     title: "Portfolio Website",
     description:
@@ -394,29 +403,6 @@ const projects = [
     thumbnail: ss1,
     link: "https://github.com/Aliozzaim/TravelExplorer",
   },
-
-  {
-    title: "Consultancy",
-    description:
-      "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-    ],
-    demoLink: "https://consultancy-two-coral.vercel.app/",
-    thumbnail: consult,
-    link: "https://consultancy-two-coral.vercel.app/",
-  },
   {
     title: "Daily Meal",
     description:
@@ -438,6 +424,28 @@ const projects = [
     demoLink: "https://dailymeal.vercel.app/",
     thumbnail: Meal,
     link: "https://github.com/Aliozzaim/dailymeal",
+  },
+  {
+    title: "Consultancy",
+    description:
+      "Consultancy is a company website that shows the services and offers of the company. It is built css and javascript. It features a responsive design and a user-friendly interface.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://consultancy-two-coral.vercel.app/",
+    thumbnail: consult,
+    link: "https://consultancy-two-coral.vercel.app/",
   },
 ]
 

@@ -10,7 +10,6 @@ import GitHub from "../assets/github-mark.svg"
 import Linkedin from "../assets/linkedin-svgrepo-com.svg"
 import { gsap } from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { Tube } from "@react-three/drei"
 
 const Navbar = () => {
   gsap.registerPlugin(ScrollToPlugin)

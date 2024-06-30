@@ -31,6 +31,8 @@ import faycalWP2 from "../assets/falcalWP2.png"
 import consult from "../assets/consul.png"
 import upBox from "../assets/upbox.png"
 import Meal from "../assets/meal.png"
+import ws from "../assets/company/ws.png"
+
 export const navLinks = [
   // {
   //   id: "about",
@@ -131,12 +133,24 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Software Engineer Trainee",
+    company_name: "WithSecure",
+    icon: ws,
+    location: "Poznan, Poland",
+    iconBg: "#383E56",
+    date: "june 2024 - Present",
+    points: [
+      "Maintenance and improvement of the company's web applications.",
+      "Technologies: Vue 3, Svelte, TypeScript, AWS, Jira, Jenkins.",
+    ],
+  },
+  {
     title: "Full stack Developer",
     company_name: "Freelancer",
     location: "Remote",
     icon: fiver,
     iconBg: "#E6DEDD",
-    date: "September 2023 - Present",
+    date: "September 2023 - may 2024",
     points: [
       "Successfully utilized Next.js to build fast-loading, server-rendered React applications.",
       "Proactively reached out to clients to understand their needs and offered helpful suggestions.",

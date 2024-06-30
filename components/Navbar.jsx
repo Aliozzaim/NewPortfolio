@@ -1,24 +1,42 @@
 /* eslint-disable */
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { styles } from "../styles"
 import { navLinks } from "../constants"
-import { ButtonsCard } from "./ui/Button"
 import { menu, close, github } from "../assets"
 import GitHub from "../assets/github-mark.svg"
 import Linkedin from "../assets/linkedin-svgrepo-com.svg"
+import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+import { Tube } from "@react-three/drei"
 
 const Navbar = () => {
+  gsap.registerPlugin(ScrollToPlugin)
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [scrollY, setScrollY] = useState(0) // Added scrollY state
+  const isAnimating = useRef(true)
+  const [section, setSection] = useState(1)
+  const lastScroll = useRef(1)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY
-      if (scrollTop > 500) {
+      const currentScroll = window.scrollY
+      const sectionHeight = window.innerHeight
+      const curSection = Math.floor(currentScroll / sectionHeight)
+
+      setScrollY(currentScroll)
+
+      if (450 > currentScroll && section === 0) {
+        setSection(1)
+      } else if (currentScroll >= 650 && section === 1) {
+        /// i need new logic to animate the scroll down to the up
+      }
+
+      if (currentScroll > 500) {
         setScrolled(true)
       } else {
         setScrolled(false)
@@ -26,9 +44,26 @@ const Navbar = () => {
     }
 
     window.addEventListener("scroll", handleScroll)
-
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [scrolled, setScrolled, setActive, setToggle])
+  }, [section])
+
+  useEffect(() => {
+    if (
+      scrollY !== 0 &&
+      (section === 0 || section === 1) &&
+      isAnimating.current
+    ) {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: 650 * section,
+        },
+        ease: "power3.inOut",
+        onStart: () => (isAnimating.current = true),
+        onComplete: () => (isAnimating.current = false),
+      })
+    }
+  }, [scrollY, section])
 
   return (
     <nav
@@ -44,7 +79,7 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("")
-            window.scrollTo(0, 0)
+            window.scrollTo(50, 800)
           }}
         >
           <p className=" text-[18px] font-bold cursor-pointer flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">

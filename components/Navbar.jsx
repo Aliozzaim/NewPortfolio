@@ -1,19 +1,22 @@
 /* eslint-disable */
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { styles } from "../styles"
 import { navLinks } from "../constants"
-import { ButtonsCard } from "./ui/Button"
 import { menu, close, github } from "../assets"
 import GitHub from "../assets/github-mark.svg"
 import Linkedin from "../assets/linkedin-svgrepo-com.svg"
+import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 
 const Navbar = () => {
+  gsap.registerPlugin(ScrollToPlugin)
   const [active, setActive] = useState("")
   const [toggle, setToggle] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const isAnimating = useRef(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +29,37 @@ const Navbar = () => {
     }
 
     window.addEventListener("scroll", handleScroll)
-
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [scrolled, setScrolled, setActive, setToggle])
+  }, [])
 
+  const handleScrollAnimation = () => {
+    if (isAnimating.current) return
+
+    const scrollY = window.scrollY
+    isAnimating.current = true
+
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {
+        y: scrollY + 100, // Adjust the value as needed for the scroll distance
+        offsetY: 50,
+      },
+      ease: "power3.inOut",
+      onComplete: () => {
+        isAnimating.current = false
+      },
+    })
+  }
+
+  useEffect(() => {
+    const handleScrollDebounced = () => {
+      if (!isAnimating.current) {
+        handleScrollAnimation()
+      }
+    }
+    window.addEventListener("scroll", handleScrollDebounced)
+    return () => window.removeEventListener("scroll", handleScrollDebounced)
+  }, [])
   return (
     <nav
       className={`${
@@ -44,7 +74,7 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("")
-            window.scrollTo(0, 0)
+            window.scrollTo(50, 800)
           }}
         >
           <p className=" text-[18px] font-bold cursor-pointer flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">

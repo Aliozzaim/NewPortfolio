@@ -133,7 +133,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Software Engineer Trainee",
+    title: "Software Engineer",
     company_name: "WithSecure",
     icon: ws,
     location: "Poznan, Poland",

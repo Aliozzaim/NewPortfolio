@@ -141,7 +141,7 @@ const experiences = [
     date: "june 2024 - Present",
     points: [
       "Maintenance and improvement of the company's web applications.",
-      "Technologies: Vue 3, Svelte, TypeScript, AWS, Jira, Jenkins.",
+      "Technologies: Vue 3, Svelte, TypeScript, Jira",
     ],
   },
   {

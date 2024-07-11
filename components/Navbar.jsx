@@ -53,11 +53,11 @@ const Navbar = () => {
       isAnimating.current
     ) {
       gsap.to(window, {
-        duration: 1,
+        duration: 0.8,
         scrollTo: {
           y: 650 * section,
         },
-        ease: "power3.inOut",
+        ease: "elastic.out(1,0.5)",
         onStart: () => (isAnimating.current = true),
         onComplete: () => (isAnimating.current = false),
       })

@@ -18,7 +18,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JTR5CF1TC"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-4JTR5CF1TC');
+        </script>
+        {/* <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-4JTR5CF1TC"
         />
@@ -27,9 +35,9 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', ${`${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`});
+              gtag('config', 'G-4JTR5CF1TC');
           `}
-        </Script>
+        </Script> */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>

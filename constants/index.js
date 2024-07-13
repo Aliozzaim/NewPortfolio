@@ -34,10 +34,10 @@ import Meal from "../assets/meal.png"
 import ws from "../assets/company/ws.png"
 
 export const navLinks = [
-  // {
-  //   id: "about",
-  //   title: "About",
-  // },
+  {
+    id: "blog",
+    title: "Blog",
+  },
   {
     id: "work",
     title: "Work",

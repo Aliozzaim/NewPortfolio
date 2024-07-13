@@ -9,13 +9,12 @@ import Contact from "../components/Contact"
 import { TechParallax } from "@/components/ui/Tech-parallax"
 import { technologies } from "@/constants"
 import { World } from "@/components/ui/Globe"
+import HeroAbout from "@/components/HeroAbout"
 
 export default function Home() {
   return (
     <div className="relative z-0 bg-primary">
-      <Navbar />
-      <Hero />
-      <About />
+      <HeroAbout />
       <Experience />
       <Education />
       <TechParallax products={technologies} />

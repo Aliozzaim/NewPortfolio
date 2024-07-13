@@ -15,9 +15,10 @@ import { ReactLenis, useLenis } from "@studio-freight/react-lenis"
 const Navbar = () => {
   gsap.registerPlugin(ScrollToPlugin)
   const [active, setActive] = useState("")
+  const [root, setRoot] = useState("")
   const [toggle, setToggle] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [scrollY, setScrollY] = useState(0) // Added scrollY state
+  const [scrollY, setScrollY] = useState(0)
   const isAnimating = useRef(true)
   const [section, setSection] = useState(0)
   const lastScroll = useRef(1)
@@ -73,6 +74,12 @@ const Navbar = () => {
       gsap.ticker.remove(update)
     }
   })
+
+  useEffect(() => {
+    active && active === "blog" ? (window.location.href = `${active}`) : null
+    active && active !== "blog" ? (window.location.href = `/#${active}`) : null
+  }, [active])
+
   return (
     <ReactLenis root>
       <nav
@@ -110,7 +117,7 @@ const Navbar = () => {
               >
                 <a
                   className="  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 hover:from-neutral-100 hover:to-neutral-50"
-                  href={`#${nav.id}`}
+                  href={`${nav.id === "blog" ? "" : "#"}${nav.id}`}
                 >
                   {nav.title}
                 </a>

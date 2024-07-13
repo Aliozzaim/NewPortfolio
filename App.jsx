@@ -1,25 +1,11 @@
-/* eslint-disable */
-
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components"
+import { Contact, Experience, Tech, Works } from "./components"
+import HeroAbout from "./components/HeroAbout"
 
 import Education from "./components/Education"
 const App = () => {
   return (
     <div className="relative z-0 bg-primary">
-      <div className="bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
+      <HeroAbout />
       <Experience />
       <Education />
       <Tech />

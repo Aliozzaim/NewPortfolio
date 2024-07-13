@@ -7,9 +7,9 @@ import Experience from "./Experience"
 import Works from "./Works"
 import Animation from "./Animation"
 import Contact from "./Contact"
+import HeroAbout from "./HeroAbout"
 
 export {
-  Hero,
   Navbar,
   About,
   Tech,

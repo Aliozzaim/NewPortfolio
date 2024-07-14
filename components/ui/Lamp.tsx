@@ -3,7 +3,8 @@ import React from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/utils/cn"
 
-export function LampDemo() {
+export function LampDemo(probs: any) {
+  const { ref } = probs
   return (
     <LampContainer>
       <motion.h1

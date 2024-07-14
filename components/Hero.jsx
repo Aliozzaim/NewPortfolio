@@ -3,13 +3,13 @@ import React from "react"
 import TextAnimation from "./animations/TextAnimation"
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto `}>
+    <section className={`relative w-full h-screen mx-auto max-w-[1480px] `}>
       <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="-top-40 left-0 md:left-60 md:-top-25    max-sm:-top-10"
           fill="white"
         />
-        <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+        <div className=" p-4 max-w-7xl  max-md:mt-[100px]  mx-auto relative z-10  w-full pt-20 md:pt-0">
           <h1 className="text-center cursor-pointer ">
             <TextAnimation>
               <span className="text-4xl inline md:text-7xl font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 hover:from-neutral-100 hover:to-neutral-500">

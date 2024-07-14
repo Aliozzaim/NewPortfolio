@@ -22,22 +22,24 @@ const Navbar = () => {
   const isAnimating = useRef(true)
   const [section, setSection] = useState(0)
   const lastScroll = useRef(1)
+  const [pathname, setPathname] = useState("/") // Default to root
+
+  useEffect(() => {
+    const handlePopState = () => setPathname(window.location.pathname)
+    window.addEventListener("popstate", handlePopState)
+
+    setPathname(window.location.pathname)
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState)
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY
-      const sectionHeight = window.innerHeight
-      const curSection = Math.floor(currentScroll / sectionHeight)
 
-      setScrollY(currentScroll)
-
-      if (450 > currentScroll && section === 0) {
-        setSection(1)
-      } else if (currentScroll >= 650 && section === 1) {
-        setSection(2)
-      }
-
-      if (currentScroll > 500) {
+      if (currentScroll > 500 || (pathname === "/blog" && currentScroll > 2)) {
         setScrolled(true)
       } else {
         setScrolled(false)
@@ -46,7 +48,7 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [section])
+  }, [section, pathname, scrollY])
 
   useEffect(() => {
     // if (section === 1) {

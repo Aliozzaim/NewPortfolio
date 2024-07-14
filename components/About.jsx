@@ -13,7 +13,7 @@ import TextAnimation from "./animations/TextAnimation"
 const ServiceCard = ({ index, title, icon }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-    className="w-full  p-[2px] rounded-[20px] shadow-card  bg-[#18181b]"
+    className="w-full  p-[2px] rounded-[20px] shadow-card   bg-[#18181b]"
   >
     <div
       options={{
@@ -42,7 +42,7 @@ const About = () => {
       <span id="about">
         <motion.div variants={textVariant()}>
           <h2
-            className={`text-center m-auto text-6xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
+            className={`text-center  m-auto text-6xl max-sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 `}
           >
             About Me
           </h2>

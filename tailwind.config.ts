@@ -1,4 +1,19 @@
 import type { Config } from "tailwindcss"
+const colors = require("tailwindcss/colors")
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette")
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  )
+
+  addBase({
+    ":root": newVars,
+  })
+}
 
 const config: Config = {
   content: [
@@ -39,8 +54,7 @@ const config: Config = {
       },
     },
   },
-
-  plugins: [],
+  plugins: [addVariablesForColors],
 }
 
 export default config

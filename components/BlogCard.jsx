@@ -12,7 +12,7 @@ const items = [
     title: "Creating 3D Art Gallery with Three.js",
     description:
       "Learn how to create a 3D art gallery using Three.js and React.",
-    link: "https://dev.to/aliozzaim",
+    link: "https://dev.to/aliozzaim/creating-a-3d-gallery-app-with-threejs-html-and-css-part-1-2gcf",
   },
   {
     id: 2,

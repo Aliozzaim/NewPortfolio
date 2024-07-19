@@ -10,7 +10,7 @@ const Hero = () => {
           fill="white"
         />
         <div className=" p-4 max-w-7xl  max-md:mt-[100px]  mx-auto relative z-10  w-full pt-20 md:pt-0">
-          <h1 className="text-center cursor-pointer ">
+          <h1 className="text-center  ">
             <TextAnimation>
               <span className="text-4xl inline md:text-7xl font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 hover:from-neutral-100 hover:to-neutral-500">
                 Hi, I&apos;m <span>Ali</span>
@@ -18,7 +18,7 @@ const Hero = () => {
             </TextAnimation>
           </h1>
 
-          <h4 className="mt-4 cursor-pointer font-normal text-base text-neutral-300 max-w-lg text-center mx-auto hover:text-neutral-200">
+          <h4 className="mt-4  font-normal text-base text-neutral-300 max-w-lg text-center mx-auto hover:text-neutral-200">
             <TextAnimation>
               <span>
                 I&apos;m a full stack developer with a passion for creating

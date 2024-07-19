@@ -29,7 +29,7 @@ export const BackgroundGradient = ({
   }
 
   return type !== "tilt" ? (
-    <Tilt className="xs:w-[250px] cursor-pointer">
+    <Tilt className="xs:w-[250px] ">
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <div className={cn("relative p-[4px] group", containerClassName)}>
           <motion.div

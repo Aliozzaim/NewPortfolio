@@ -87,7 +87,7 @@ const Navbar = () => {
       <nav
         className={`${
           styles.paddingX
-        } w-full    z-50 flex items-center py-5  fixed top-0  mx-auto bg-black ${
+        } w-full    z-[49] flex items-center py-5  fixed top-0  mx-auto bg-black ${
           scrolled ? "" : "bg-transparent"
         }`}
       >
@@ -100,7 +100,7 @@ const Navbar = () => {
               window.scrollTo(50, 800)
             }}
           >
-            <p className=" text-[18px] font-bold cursor-pointer flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
+            <p className=" text-[18px] font-bold  flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
               Ali Ozzaim &nbsp;
               <span className="sm:block hidden"> | Full Stack Developer</span>
             </p>
@@ -114,7 +114,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`${
                   active === nav.title ? "text-white " : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                } hover:text-white text-[18px] font-medium `}
                 onClick={() => setActive(nav.title)}
               >
                 <a
@@ -165,7 +165,7 @@ const Navbar = () => {
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[16px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ${
+                    className={`font-poppins font-medium  text-[16px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ${
                       active === nav.title ? "text-white" : "text-secondary"
                     }`}
                     onClick={() => {

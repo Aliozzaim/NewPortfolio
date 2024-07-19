@@ -20,7 +20,6 @@ export default function TextAnimation({
     if (isInview) {
       controls.start("visible")
       slideControls.start("visible")
-      console.log("visible: ", slideControls)
     }
   }, [controls, isInview, slideControls])
 

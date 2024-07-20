@@ -14,16 +14,17 @@ import { FollowerPointerCard } from "@/components/ui/FollowingPointer"
 
 export default function Home() {
   return (
-    <FollowerPointerCard>
-      <div className="relative z-0 bg-primary">
-        <Navbar />
-        <HeroAbout />
-        <Experience />
-        <Education />
-        <TechParallax products={technologies} />
-        <Works />
-        <Contact />
-      </div>
-    </FollowerPointerCard>
+    <div className="relative z-0 bg-primary">
+      <Navbar />
+
+      <HeroAbout />
+
+      <Experience />
+      <Education />
+
+      <TechParallax products={technologies} />
+      <Works />
+      <Contact />
+    </div>
   )
 }

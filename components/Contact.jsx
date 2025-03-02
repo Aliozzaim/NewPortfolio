@@ -82,8 +82,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_5do17kb",
-        "template_c74two7",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Ali",
@@ -91,7 +91,7 @@ const Contact = () => {
           to_email: "Aliozzaim788@gmail.com",
           message: form.message,
         },
-        "RxwvCc3HpuVVISH5y"
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         setForm({
@@ -202,11 +202,10 @@ const Contact = () => {
             </form>
             {isSubmitted && (
               <div
-                className={`mt-2 text-white text-center ${
-                  submitMessage.includes("Thank")
+                className={`mt-2 text-white text-center ${submitMessage.includes("Thank")
                     ? "text-green-500"
                     : "text-red-500"
-                }`}
+                  }`}
               >
                 {submitMessage}
               </div>

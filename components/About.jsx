@@ -1,7 +1,6 @@
 "use client"
 /* eslint-disable */
 import React from "react"
-import { Tilt } from "react-tilt"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { services } from "../constants"
@@ -53,7 +52,7 @@ const About = () => {
           className="mt-4  ml-[18%] max-lg:ml-[10%] max-sm:ml-0 text-center  text-[17px] max-w-3xl leading-[30px]"
         >
           <TextAnimation>
-            I'm a skilled software developer with experience in TypeScript and
+            I'm a skilled software engineer with experience in TypeScript and
             JavaScript, and expertise in frameworks like React, Node.js, and
             Three.js. I'm a quick learner and collaborate closely with clients
             to create efficient, scalable, and user-friendly solutions that

@@ -15,23 +15,24 @@ import {
   git,
   figma,
   threejs,
-} from "../assets"
-import ss1 from "../assets/ss4.png"
-import sompo from "../assets/company/sompo.png"
-import poznan from "../assets/company/poznan.png"
-import eru from "../assets/company/eru.png"
-import patika from "../assets/company/patika.png"
-import fiver from "../assets/company/fiverr.jpg"
+} from "../assets";
+import ss1 from "../assets/ss4.png";
+import sompo from "../assets/company/sompo.png";
+import poznan from "../assets/company/poznan.png";
+import eru from "../assets/company/eru.png";
+import patika from "../assets/company/patika.png";
+import fiver from "../assets/company/fiverr.jpg";
 
-import nakilport from "../assets/nakilport2.png"
-import MercanSoft from "../assets/mercansoft.png"
-import ecommerce from "../assets/art.png"
-import garden from "../assets/garden.png"
-import faycalWP2 from "../assets/falcalWP2.png"
-import consult from "../assets/consul.png"
-import upBox from "../assets/upbox.png"
-import Meal from "../assets/meal.png"
-import ws from "../assets/company/ws.png"
+import nakilport from "../assets/nakilport2.png";
+import MercanSoft from "../assets/mercansoft.png";
+import ecommerce from "../assets/art.png";
+import garden from "../assets/garden.png";
+import faycalWP2 from "../assets/falcalWP2.png";
+import consult from "../assets/consul.png";
+import upBox from "../assets/upbox.png";
+import Meal from "../assets/meal.png";
+import ws from "../assets/company/ws.png";
+import deco from "../assets/deco.png";
 
 export const navLinks = [
   {
@@ -50,11 +51,11 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
-]
+];
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Rust Developer",
     icon: web,
   },
   {
@@ -66,10 +67,10 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "AWS Developer",
     icon: creator,
   },
-]
+];
 
 const technologies = [
   {
@@ -129,7 +130,7 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-]
+];
 
 const experiences = [
   {
@@ -174,7 +175,7 @@ const experiences = [
       "I contributed to the development of the word application, which uses +200 thousand users in the Android market.",
     ],
   },
-]
+];
 
 const education = [
   {
@@ -209,7 +210,7 @@ const education = [
     date: "September 2018 - September 2022",
     points: [],
   },
-]
+];
 
 const testimonials = [
   {
@@ -236,7 +237,7 @@ const testimonials = [
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
-]
+];
 
 const projects = [
   {
@@ -349,7 +350,28 @@ const projects = [
     thumbnail: upBox,
     link: "https://up-box.vercel.app/#",
   },
-
+  {
+    title: "Decorotika",
+    description:
+      "Decorotika is a TypeScript-based e-commerce platform for home furniture and decor. Built with PostgreSQL and Express.js, it features user authentication, product management, order processing, and an admin panel. The platform operates in Serbia, Turkey, Albania, and Montenegro, attracting over 2,000 daily visitors.",
+    tags: [
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    demoLink: "https://decorotika.rs/",
+    thumbnail: deco,
+    link: "https://decorotika.rs/",
+  },
   {
     title: "Portfolio Website",
     description:
@@ -461,7 +483,7 @@ const projects = [
     thumbnail: consult,
     link: "https://consultancy-two-coral.vercel.app/",
   },
-]
+];
 
 export {
   services,
@@ -470,4 +492,4 @@ export {
   testimonials,
   projects,
   education,
-}
+};

@@ -1,4 +1,4 @@
-import Image from "next/image"
+"use server"
 import Navbar from "@/components/Navbar"
 import Hero from "../components/Hero"
 import About from "../components/About"
@@ -12,19 +12,18 @@ import { World } from "@/components/ui/Globe"
 import HeroAbout from "@/components/HeroAbout"
 import { FollowerPointerCard } from "@/components/ui/FollowingPointer"
 
-export default function Home() {
+export default async function Home() {
   return (
-    <div className="relative z-0 bg-primary">
-      <Navbar />
-
-      <HeroAbout />
-
-      <Experience />
-      <Education />
-
-      <TechParallax products={technologies} />
-      <Works />
-      <Contact />
-    </div>
+    <>
+      <div className="relative z-0 bg-primary">
+        <Navbar />
+        <HeroAbout />
+        <Experience />
+        <Education />
+        <TechParallax products={technologies} />
+        <Works />
+        <Contact />
+      </div>
+    </>
   )
 }

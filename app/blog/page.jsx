@@ -4,7 +4,6 @@ import { LampDemo } from "@/components/ui/Lamp"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import BlogCard from "@/components/BlogCard"
-import { FollowerPointerCard } from "@/components/ui/FollowingPointer"
 import Navbar from "@/components/Navbar"
 const Blog = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -36,7 +35,7 @@ const Blog = () => {
 
   return (
     <span>
-      <Navbar></Navbar>
+      <Navbar />
       <div className="w-[200%] h-screen flex flex-nowrap">
         <section className="w-[100%] will-change-transform" ref={section1Ref}>
           <LampDemo />

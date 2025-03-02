@@ -85,11 +85,9 @@ const Navbar = () => {
   return (
     <ReactLenis root>
       <nav
-        className={`${
-          styles.paddingX
-        } w-full    z-[49] flex items-center py-5  fixed top-0  mx-auto bg-black ${
-          scrolled ? "" : "bg-transparent"
-        }`}
+        className={`${styles.paddingX
+          } w-full z-[49] flex items-center py-5 fixed top-0  mx-auto bg-black ${scrolled ? "" : "bg-transparent"
+          }`}
       >
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
           <Link
@@ -100,9 +98,9 @@ const Navbar = () => {
               window.scrollTo(50, 800)
             }}
           >
-            <p className=" text-[18px] font-bold  flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
+            <p className="text-[18px] font-bold  flex bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ">
               Ali Ozzaim &nbsp;
-              <span className="sm:block hidden"> | Full Stack Developer</span>
+              <span className="sm:block hidden"> | Full Stack Engineer</span>
             </p>
           </Link>
 
@@ -112,9 +110,8 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`${
-                  active === nav.title ? "text-white " : "text-secondary"
-                } hover:text-white text-[18px] font-medium `}
+                className={`${active === nav.title ? "text-white " : "text-secondary"
+                  } hover:text-white text-[18px] font-medium `}
                 onClick={() => setActive(nav.title)}
               >
                 <a
@@ -157,17 +154,15 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
             <div
-              className={`${
-                !toggle ? "hidden" : "flex"
-              } p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] w-[50%] z-10 rounded-xl`}
+              className={`${!toggle ? "hidden" : "flex"
+                } p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] w-[50%] z-10 rounded-xl`}
             >
               <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className={`font-poppins font-medium  text-[16px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ${
-                      active === nav.title ? "text-white" : "text-secondary"
-                    }`}
+                    className={`font-poppins font-medium  text-[16px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 ${active === nav.title ? "text-white" : "text-secondary"
+                      }`}
                     onClick={() => {
                       setToggle(!toggle)
                       setActive(nav.title)

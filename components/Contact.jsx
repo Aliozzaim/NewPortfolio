@@ -3,8 +3,6 @@
 import React, { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import emailjs from "@emailjs/browser"
-import Animation from "./Animation"
-import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { BackgroundGradient } from "./ui/Background-gradient"
@@ -12,6 +10,8 @@ import { slideIn } from "../utils/motion"
 import { Button } from "@nextui-org/react"
 import Confetti from "react-confetti"
 import { useWindowSize } from "react-use"
+import dynamic from "next/dynamic"
+const Animation = dynamic(() => import("./Animation"), { ssr: false })
 
 const Contact = () => {
   const { width, height } = useWindowSize()
@@ -86,9 +86,9 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Ali",
+          to_name: process.env.NEXT_PUBLIC_TO_NAME,
           from_email: form.email,
-          to_email: "Aliozzaim788@gmail.com",
+          to_email: process.env.NEXT_PUBLIC_TO_EMAIL,
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
@@ -203,8 +203,8 @@ const Contact = () => {
             {isSubmitted && (
               <div
                 className={`mt-2 text-white text-center ${submitMessage.includes("Thank")
-                    ? "text-green-500"
-                    : "text-red-500"
+                  ? "text-green-500"
+                  : "text-red-500"
                   }`}
               >
                 {submitMessage}

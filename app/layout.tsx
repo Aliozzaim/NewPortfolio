@@ -33,7 +33,10 @@ export default function RootLayout({
         </Script>
       </head>
 
-      <body className={(inter.className, "overflow-x-hidden")}>{children}</body>
+      <body className={(inter.className, "overflow-x-hidden")}>{children}
+        <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/03/15/17/20250315172614-2C9FGX3J.js"></script>
+      </body>
     </html>
   )
 }

@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.bpComposerPoweredBy {
+  display: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;

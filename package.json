@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@botpress/webchat": "2.3",
     "@emailjs/browser": "^3.11.0",
     "@nextui-org/react": "^2.2.9",
     "@react-three/drei": "^9.108.1",
